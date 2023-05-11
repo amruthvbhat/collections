@@ -1,0 +1,199 @@
+collections
+common methods-size(),isEmpty(),add(0,addAll(),remove(),removeAll(collection),retinAll(collection),contains(element),containsAll(colection),clear90
+
+package javasample.collections.ArrayList;
+import java.util.*; 
+public class ArrayList_Get_Set {
+	
+	 public static void main(String args[]){  
+	  ArrayList<String> al=new ArrayList<String>();  
+	  al.add("Mango");  
+	  al.add("Apple");  
+	  al.add("Banana");  
+	  al.add("Grapes");  
+	  //accessing the element    
+	  System.out.println("Returning element: "+al.get(1));//it will return the 2nd element, because index starts from 0  
+	  //changing the element  
+	  al.set(1,"Dates");  
+	  //Traversing list  
+	  for(String fruit:al)    
+	    System.out.println(fruit);    
+	  
+	 }  
+	} 
+
+
+package javasample.collections.ArrayList;
+import java.util.*;  
+public class arrayList_iterator_foreach {
+	 
+	 public static void main(String args[]){  
+	  ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
+	  list.add("Mango");//Adding object in arraylist    
+	  list.add("Apple");    
+	  list.add("Banana");    
+	  list.add("Grapes");    
+	  //Traversing list through for-each loop  
+	  for(String fruit:list)    
+	    System.out.println(fruit);    
+	  
+	 }  
+	}
+
+
+
+
+package javasample.collections.ArrayList;
+import java.util.*;
+public class ArrayList_iterator {
+	//Iterating ArrayList using Iterator
+ 
+	 public static void main(String args[]){  
+	  ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
+	  list.add("Mango");//Adding object in arraylist    
+	  list.add("Apple");    
+	  list.add("Banana");    
+	  list.add("Grapes");    
+	  //Traversing list through Iterator  
+	  Iterator itr=list.iterator();//getting the Iterator  
+	  while(itr.hasNext()){//check if iterator has the elements  
+	   System.out.println(itr.next());//printing the element and move to next  
+	  
+	  
+	  
+	  }
+	  
+	  for(String i:list)
+	  {
+		  System.out.println(i);
+	  }
+	  {
+		  
+	  }
+	 } 
+	 
+	} 
+
+
+
+
+
+package javasample.collections.ArrayList;
+import java.util.*;
+public class Arraylist1 {
+	  
+	 public static void main(String args[]){  
+	  ArrayList<String> list=new ArrayList<String>();//Creating arraylist    
+	      list.add("a");//Adding object in arraylist    
+	      list.add("b");    
+	      list.add("c");    
+	      list.add("d");  
+	      list.add("e");
+	      //Printing the arraylist object   
+	      System.out.println(list);  
+	      
+	     
+	      
+	  ArrayList<Integer> a1=new ArrayList<>();
+	  a1.add(0, 1);
+	  a1.add(0, 2);
+	  a1.add(0, 3);
+	  a1.add(0, 4);
+	  a1.add(0, 5);
+	  a1.add(0, 1);
+	  System.out.println(a1);
+	  
+	  
+	  
+	  
+	 }  
+	}  
+
+
+
+
+package javasample.collections.ArrayList;
+import java.util.*;    
+
+public class ArrayList_Sort {
+	 public static void main(String args[]){  
+	  //Creating a list of fruits  
+	  List<String> list1=new ArrayList<String>();  
+	  list1.add("Mango");  
+	  list1.add("Apple");  
+	  list1.add("Banana");  
+	  list1.add("Grapes");  
+	  //Sorting the list  
+	  Collections.sort(list1);  
+	   //Traversing list through the for-each loop  
+	  for(String fruit:list1)  
+	    System.out.println(fruit);  
+	      
+	 System.out.println("Sorting numbers...");  
+	  //Creating a list of numbers  
+	  List<Integer> list2=new ArrayList<Integer>();  
+	  list2.add(21);  
+	  list2.add(11);  
+	  list2.add(51);  
+	  list2.add(1);
+	  System.out.println("BEFORE SORTING"); 
+	  for(Integer number:list2)  
+		    System.out.println(number);
+	  
+	  
+	  //Sorting the list  
+	  Collections.sort(list2);  
+	  
+	  System.out.println("AFTER SORTING");
+	   //Traversing list through the for-each loop  
+	  for(Integer number:list2)  
+	    System.out.println(number);  
+	 }  
+	   
+	}  
+
+
+
+
+User-defined class objects in Java ArrayList
+package javasample.collections.ArrayList;
+import java.util.*;  
+  
+public class ArrayList5 {
+	
+	 public static void main(String args[]){  
+	  //Creating user-defined class objects  
+	  Student s1=new Student(101,"Sonoo",23);  
+	  Student s2=new Student(102,"Ravi",21);  
+	  Student s3=new Student(103,"Hanumat",25);  
+	  //creating arraylist  
+	  ArrayList<Student> al=new ArrayList<Student>();  
+	  al.add(s1);//adding Student class object  
+	  al.add(s2);  
+	  //al.add(s3);  
+	  //Getting Iterator  
+	  Iterator itr=al.iterator();  
+	  //traversing elements of ArrayList object  
+	  while(itr.hasNext()){  
+	    Student st=(Student)itr.next();  
+	    System.out.println(st.rollno+" "+st.name+" "+st.age);  
+	  }  
+	 }  
+	}  
+
+
+package javasample.collections.ArrayList;
+
+public class Student {
+	
+		  int rollno;  
+		  String name;  
+		  int age;  
+		  Student(int rollno,String name,int age){  
+		   this.rollno=rollno;  
+		   this.name=name;  
+		   this.age=age;  
+		  }  
+		}  
+
+
