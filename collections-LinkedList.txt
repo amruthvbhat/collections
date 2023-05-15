@@ -1,0 +1,163 @@
+package javasample.collections.LinkedList;
+import java.util.*;
+
+//Implementation of LinkedList
+public class LinkedList1 {
+	public static void main(String args[])
+	{
+		 LinkedList<String> ll = new LinkedList<String>();
+		 
+
+	        ll.add("A");
+	        ll.add("B");
+	        ll.addLast("C");
+	        ll.addFirst("D");
+	        ll.add(2, "E");
+	        
+	        System.out.println(ll);
+	        
+	        
+	        ll.remove("B");
+	        ll.remove(3);
+	        ll.removeFirst();
+	        ll.removeLast();
+	 
+	        System.out.println(ll);
+	        
+	        
+	}
+
+}
+
+
+Performing Various Operations on LinkedList:
+Adding elements
+Updating elements
+Removing elements
+Iterating over elements
+To Array();
+ Size();
+remove First();
+remove last();
+
+
+package javasample.collections.LinkedList;
+import java.util.*;
+public class LinkedList_operation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Operation 1: Adding Elements
+		LinkedList<String> ll = new LinkedList<>(); 
+        ll.add("aa");
+        ll.add("bb");
+        ll.add(1, "cc");
+        System.out.println(ll);
+        
+        
+        //Operation 2: Changing Elements
+        LinkedList<String> l2 = new LinkedList<>();
+        l2.add("a");
+        l2.add("b");
+        l2.add(1, "c");
+        System.out.println("Initial LinkedList " + l2); 
+        l2.set(1, "new_element"); 
+        System.out.println("Updated LinkedList " + l2);
+        
+        
+        //Operation 3: Removing Elements
+        LinkedList<String> l3 = new LinkedList<>();      
+        l3.add("amruth");
+        l3.add("v");
+        l3.add(1, "For");
+        System.out.println("Initial LinkedList " + l3);
+        l3.remove(1);
+        System.out.println("After the Index Removal " + l3);
+        l3.remove("Geeks");
+        System.out.println("After the Object Removal "
+                           + l3);
+        
+        
+        //Operation 4: Iterating the LinkedList
+        LinkedList<String> l4= new LinkedList<>();
+        l4.add("r");
+        l4.add("s");
+        l4.add(1, "For");
+        for (int i = 0; i < l4.size(); i++) {
+        System.out.print(l4.get(i) + " ");
+        }
+        System.out.println();
+        for (String str : l4)
+        System.out.print(str + " ");
+        
+        //Operation 5-size();
+        LinkedList<String> list = new LinkedList<String>();
+        list.add("amruth v bhat ");
+        list.add("qqqq ");
+        // Displaying the size of the list
+        System.out.print(list + " ");
+        System.out.println("The size of the linked list is: " + list.size());
+        
+        
+        //Operation 6 – removeFirst();
+        LinkedList<Integer> l6 = new LinkedList<Integer>();
+        l6.add(10);
+        l6.add(20);
+        l6.add(30);
+        System.out.println("LinkedList:" + list);
+        System.out.println("The  remove first element is: " + l6.removeFirst());
+        // Displaying the final list
+        System.out.println("Final LinkedList:" + l6);
+        
+        //Operation 7- removelast();
+        LinkedList<Integer> l7 = new LinkedList<Integer>();
+        l7.add(10);
+        l7.add(20);
+        l7.add(30);
+        System.out.println("LinkedList:" + l7);
+        // Remove the tail using removeLast()
+        System.out.println("The last element is removed: "+ l7.removeLast());
+        // Displaying the final list
+        System.out.println("Final LinkedList:" + l7);
+        // Remove the tail using removeLast()
+        System.out.println("The last element is removed: " + l7.removeLast());
+        // Displaying the final list
+        System.out.println("Final LinkedList:" + l7);
+        
+        
+        
+
+
+
+	}
+
+}
+
+
+
+
+import java.util.LinkedList;
+
+public class LinkedListExample {
+	public static void main(String[] args) {
+		// Create a new linked list
+		LinkedList<Integer> linkedList = new LinkedList<>();
+
+		// Add elements to the linked list
+		linkedList.add(1);
+		linkedList.add(2);
+		linkedList.add(3);
+
+		// Add an element to the beginning of the linked list
+		linkedList.addFirst(0);
+
+		// Add an element to the end of the linked list
+		linkedList.addLast(4);
+
+		// Print the elements of the linked list
+		for (int i : linkedList) {
+			System.out.println(i);
+		}
+	}
+}
