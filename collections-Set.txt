@@ -1,0 +1,384 @@
+The set interface is present in java.util package and extends the Collection interface. 
+It is an unordered collection of objects in which duplicate values cannot be stored. It is an interface that implements the mathematical set. 
+This interface contains the methods inherited from the Collection interface and adds a feature that restricts the insertion of the duplicate elements. There are two interfaces that extend the set implementation namely SortedSet and NavigableSet.
+
+Creating Set Objects
+Set<Obj> set = new HashSet<Obj> ();
+
+Operations on the Set Interface
+//Intersection
+//Union
+//Difference
+
+import java.util.*;
+
+// Main class
+public class Operations_on_set {
+
+
+		// Main driver method
+		public static void main(String args[])
+		{
+			// Creating an object of Set class
+			// Declaring object of Integer type
+			Set<Integer> a = new HashSet<Integer>();
+			
+			// Adding all elements to List
+			a.addAll(Arrays.asList(
+				new Integer[] { 1, 3, 2, 4, 8, 9, 0 }));
+			
+		// Again declaring object of Set class
+		// with reference to HashSet
+			Set<Integer> b = new HashSet<Integer>();
+			
+		b.addAll(Arrays.asList(
+				new Integer[] { 1, 3, 7, 5, 4, 0, 7, 5 }));
+
+			
+			// To find union
+			Set<Integer> union = new HashSet<Integer>(a);
+			union.addAll(b);
+			System.out.print("Union of the two Set");
+			System.out.println(union);
+
+			// To find intersection
+			Set<Integer> intersection = new HashSet<Integer>(a);
+			intersection.retainAll(b);
+			System.out.print("Intersection of the two Set");
+			System.out.println(intersection);
+
+			// To find the symmetric difference
+			Set<Integer> difference = new HashSet<Integer>(a);
+			difference.removeAll(b);
+			System.out.print("Difference of the two Set");
+			System.out.println(difference);
+		}
+	
+
+
+}
+
+
+
+Method	Description
+add(element)	This method is used to add a specific element to the set. The function adds the element only if the specified element is not already present in the set else the function returns False if the element is already present in the Set.
+addAll(collection)	This method is used to append all of the elements from the mentioned collection to the existing set. The elements are added randomly without following any specific order.
+clear()	This method is used to remove all the elements from the set but not delete the set. The reference for the set still exists.
+contains(element)	This method is used to check whether a specific element is present in the Set or not.
+containsAll(collection)	This method is used to check whether the set contains all the elements present in the given collection or not. This method returns true if the set contains all the elements and returns false if any of the elements are missing.
+hashCode()	This method is used to get the hashCode value for this instance of the Set. It returns an integer value which is the hashCode value for this instance of the Set.
+isEmpty()	This method is used to check whether the set is empty or not.
+iterator()	This method is used to return the iterator of the set. The elements from the set are returned in a random order.
+remove(element)	This method is used to remove the given element from the set. This method returns True if the specified element is present in the Set otherwise it returns False.
+removeAll(collection)	This method is used to remove all the elements from the collection which are present in the set. This method returns true if this set changed as a result of the call.
+retainAll(collection)	This method is used to retain all the elements from the set which are mentioned in the given collection. This method returns true if this set changed as a result of the call.
+size()	This method is used to get the size of the set. This returns an integer value which signifies the number of elements.
+toArray()	This method is used to form an array of the same elements as that of the Set.
+
+package javasample.collections.Set;
+/*
+Adding elements
+Accessing elements
+Removing elements
+Iterating elements
+Iterating through Set
+*/
+
+import java.util.*;
+
+public class Operations_SortedSet {
+	// Main driver method
+    public static void main(String[] args)
+    {
+    	
+    	//Operations 1: Adding Elements
+        // Creating an object of Set and 
+        // declaring object of type String
+        Set<String> hs = new HashSet<String>();
+  
+        // Adding elements to above object
+        // using add() method
+        hs.add("B");
+        hs.add("B");
+        hs.add("C");
+        hs.add("A");
+  
+        // Printing the elements inside the Set object
+        System.out.println(hs);
+        
+        
+        //Operation 2: Accessing the Elements
+     // Creating an object of Set and 
+        // declaring object of type String
+        Set<String> hs1 = new HashSet<String>();
+  
+        // Elements are added using add() method
+        // Later onwards we will show accessing the same
+  
+        // Custom input elements
+        hs1.add("A");
+        hs1.add("B");
+        hs1.add("C");
+        hs1.add("A");
+  
+        // Print the Set object elements
+        System.out.println("Set is " + hs1);
+  
+        // Declaring a string
+        String check = "D";
+  
+        // Check if the above string exists in
+        // the SortedSet or not
+        // using contains() method
+        System.out.println("Contains " + check + " "
+                           + hs1.contains(check));
+        
+        
+        //Operation 3: Removing the Values
+     // Declaring object of Set of type String
+        Set<String> hs11 = new HashSet<String>();
+  
+        // Elements are added
+        // using add() method
+  
+        // Custom input elements
+        hs11.add("A");
+        hs11.add("B");
+        hs11.add("C");
+        hs11.add("B");
+        hs11.add("D");
+        hs11.add("E");
+  
+        // Printing initial Set elements
+        System.out.println("Initial HashSet " + hs11);
+  
+        // Removing custom element
+        // using remove() method
+        hs11.remove("B");
+  
+        // Printing Set elements after removing an element
+        // and printing updated Set elements
+        System.out.println("After removing element " + hs11);
+        
+        
+        //Operation 4: Iterating through the Set
+     // Creating object of Set and declaring String type
+        Set<String> s = new HashSet<String>();
+  
+        // Adding elements to Set  
+        // using add() method
+  
+        // Custom input elements 
+        s.add("A");
+        s.add("B");
+        s.add("C");
+        s.add("B");
+        s.add("D");
+        s.add("E");
+  
+        // Iterating through the Set
+        // via for-each loop 
+        for (String value : s)
+  
+            // Printing all the values inside the object 
+            System.out.print(value + ", ");
+          
+        System.out.println();
+        
+        
+        
+
+
+
+
+    }
+	
+
+}
+
+
+HashSet 
+
+HashSet class which is implemented in the collection framework is an inherent implementation of the hash table data structure.
+ The objects that we insert into the HashSet do not guarantee to be inserted in the same order. The objects are inserted based on their hashcode.
+ This class also allows the insertion of NULL elements.  
+ 
+ 
+ package javasample.collections.Set;
+
+import java.util.Iterator;
+import java.util.*;
+public class HashSet1 {
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Creating object of Set of type String
+        HashSet<String> h = new HashSet<String>();
+  
+        // Adding elements into the HashSet
+        // using add() method
+  
+        // Custom input elements
+        h.add("India");
+        h.add("Australia");
+        h.add("South Africa");
+  
+        // Adding the duplicate element
+        h.add("India");
+  
+        // Displaying the HashSet
+        System.out.println(h);
+        for(String h1:h)
+        {
+        	System.out.println("element:"+h+"Hash number:"+h.hashCode());
+        }
+  
+        // Removing items from HashSet
+        // using remove() method
+        h.remove("Australia");
+        System.out.println("Set after removing "
+                           + "Australia:" + h);
+  
+        // Iterating over hash set items
+        System.out.println("Iterating over set:");
+  
+        // Iterating through iterators
+        Iterator<String> i = h.iterator();
+  
+        // It holds true till there is a single element
+        // remaining in the object
+        while (i.hasNext())
+  
+            System.out.println(i.next());
+    }
+
+}
+
+
+ 
+ Java HashSet example ignoring duplicate elements
+ 
+ package javasample.collections.Set;
+import java.util.*;
+public class HashSet_No_duplicates {
+	 public static void main(String args[]){  
+		  //Creating HashSet and adding elements  
+		  HashSet<String> set=new HashSet<String>();  
+		  set.add("Ravi");  
+		  set.add("Vijay");  
+		  set.add("Ravi");  
+		  set.add("Ajay");  
+		  //Traversing elements  
+		  Iterator<String> itr=set.iterator();  
+		  while(itr.hasNext()){  
+		   System.out.println(itr.next());  
+		  }  
+		 }  
+		}  
+		
+		
+
+package javasample.collections.Set;
+
+Java HashSet Example: Book
+
+	import java.util.*;  
+	class Book {  
+	int id;  
+	String name,author,publisher;  
+	int quantity;  
+	public Book(int id, String name, String author, String publisher, int quantity) {  
+	    this.id = id;  
+	    this.name = name;  
+	    this.author = author;  
+	    this.publisher = publisher;  
+	    this.quantity = quantity;  
+	}  
+	}  
+	public class HashSetExample {  
+	public static void main(String[] args) {  
+	    HashSet<Book> set=new HashSet<Book>();  
+	    //Creating Books  
+	    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);  
+	    Book b2=new Book(102,"Data Communications & Networking","Forouzan","Mc Graw Hill",4);  
+	    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);  
+	    //Adding Books to HashSet  
+	    set.add(b1);  
+	    set.add(b2);  
+	    set.add(b3);  
+	    //Traversing HashSet  
+	    for(Book b:set){  
+	    System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  
+	    }  
+	}  
+	
+
+}
+
+
+package javasample.collections.Set;
+import java.util.HashSet;
+
+public class HashSet_to_Array_convert {
+	
+	 public static void main(String a[]){
+	 HashSet<String> hs = new HashSet<String>();
+	 //add elements to HashSet
+	 hs.add("first");
+	 hs.add("second");
+	 hs.add("third");
+	 System.out.println("HashSet content: ");
+	 System.out.println(hs);
+	 String[] strArr = new String[hs.size()];
+	 hs.toArray(strArr);
+	 System.out.println("Copied array content:");
+	 for(String str:strArr){
+	 System.out.println(str);
+	 }
+	 }
+	
+
+}
+
+
+
+package javasample.collections.Set;
+import java.util.*;
+public class HashSet_practice {
+	public static void main(String [] args) {
+	// Creating a HashSet
+	Set<String> daysOfWeek = new HashSet<>();
+
+	// Adding new elements to the HashSet
+	daysOfWeek.add("Monday");
+	daysOfWeek.add("Tuesday");
+	daysOfWeek.add("Wednesday");
+	daysOfWeek.add("Thursday");
+	daysOfWeek.add("Friday");
+	daysOfWeek.add("Saturday");
+	daysOfWeek.add("Sunday");
+
+	// Adding duplicate elements will be ignored
+	daysOfWeek.add("Monday");
+
+	System.out.println(daysOfWeek);
+	
+	
+	Set<Integer> numbers = new HashSet<>();
+	numbers.add(2);
+	numbers.add(3);
+	numbers.add(4);
+	numbers.add(5);
+	numbers.add(6);
+	numbers.add(7);
+	numbers.add(8);
+	numbers.add(9);
+	numbers.add(10);
+
+	System.out.println("numbers : " + numbers);
+
+	boolean isRemoved = numbers.remove(10);
+	System.out.println("After remove(10) => " + numbers);
+
+}
+}
