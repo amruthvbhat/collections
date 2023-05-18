@@ -1,0 +1,576 @@
+Access elements
+package javasample.collections.HashMap.Acces_elements;
+import java.util.HashMap;
+
+
+public class entrySet_method {
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // return set view of mappings
+	    System.out.println("Set View: " + prices.entrySet());
+	  }
+	}
+
+package javasample.collections.HashMap.Acces_elements;
+import java.util.*;
+public class get_method {
+	public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<Integer, String> numbers = new HashMap<>();
+	    numbers.put(1, "Java");
+	    numbers.put(2, "Python");
+	    numbers.put(3, "JavaScript");
+
+	    // get the value with key 1
+	    String value = numbers.get(1);
+
+	    System.out.println("HashMap Value with Key 1: " + value);
+	  }
+
+}
+package javasample.collections.HashMap.Acces_elements;
+import java.util.HashMap;
+public class getOrDefault_method {
+	
+
+	
+	    public static void main(String[] args) {
+	        // create an HashMap
+	        HashMap<Integer, String> numbers = new HashMap<>();
+
+	        // insert entries to the HashMap
+	        numbers.put(1, "Java");
+	        numbers.put(2, "Python");
+	        numbers.put(3, "JavaScript");
+	        System.out.println("HashMap: " + numbers);
+
+	        // mapping for the key is present in HashMap
+	        String value1 = numbers.getOrDefault(1, "Not Found");
+	        System.out.println("Value for key 1:  " + value1);
+
+	        // mapping for the key is not present in HashMap
+	        String value2 = numbers.getOrDefault(4, "Not Found");
+	        System.out.println("Value for key 4: " + value2);
+	    }
+	}
+
+package javasample.collections.HashMap.Acces_elements;
+import java.util.HashMap;
+
+public class keySet_method {
+	
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // return set view of all keys
+	    System.out.println("Keys: " + prices.keySet());
+	  }
+	}
+
+package javasample.collections.HashMap.Acces_elements;
+import java.util.HashMap;
+public class values_method {
+
+
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // return view of all values
+	    System.out.println("Values: " + prices.values());
+	  }
+	}
+
+
+
+Add elements
+package javasample.collections.HashMap.Add_elements;
+import java.util.*;
+import java.util.HashMap;
+
+public class put_method {
+	  public static void main(String[] args) {
+
+	// create an HashMap
+    HashMap<String, Integer> languages = new HashMap<>();
+
+    // insert items to the HashMap
+    languages.put("Java", 14);
+    languages.put("Python", 3);
+    languages.put("JavaScript", 1);
+
+    // display the HashMap
+    System.out.println("Programming Languages: " + languages);
+
+}}
+package javasample.collections.HashMap.Add_elements;
+import java.util.HashMap;
+
+public class putAll_method {
+	public static void main(String[] args){
+
+	    // create an HashMap
+	    HashMap<String, Integer> primeNumbers = new HashMap<>();
+
+	    // add mappings to HashMap
+	    primeNumbers.put("Two", 2);
+	    primeNumbers.put("Three", 3);
+	    System.out.println("Prime Numbers: " + primeNumbers);
+
+	    // create another HashMap
+	    HashMap<String, Integer> numbers = new HashMap<>();
+	    numbers.put("One", 1);
+	    numbers.put("Two", 22);
+
+	    // Add all mappings from primeNumbers to numbers
+	    numbers.putAll(primeNumbers);
+	    System.out.println("Numbers: " + numbers);
+	  }
+}
+
+package javasample.collections.HashMap.Add_elements;
+import java.util.HashMap;
+
+public class putIfAbsent_method {
+	 public static void main(String[] args){
+
+		    // create a HashMap
+		    HashMap<Integer, String> languages = new HashMap<>();
+
+		    // add mappings to HashMap
+		    languages.put(1, "Python");
+		    languages.put(2, "C");
+		    languages.put(3, "Java");
+		    System.out.println("Languages: " + languages);
+
+		    // key already not present in HashMap
+		    languages.putIfAbsent(4, "JavaScript");
+
+		    // key already present in HashMap
+		    languages.putIfAbsent(2, "Swift");
+		    System.out.println("Updated Languages: " + languages);
+		  }
+
+}
+
+
+
+
+Change value
+
+package javasample.collections.HashMap.Change_value;
+import java.util.HashMap;
+
+
+public class replace_method {
+
+	  public static void main(String[] args) {
+
+	    // create an HashMap
+	    HashMap<Integer, String> languages = new HashMap<>();
+
+	    // add entries to HashMap
+	    languages.put(1, "Python");
+	    languages.put(2, "English");
+	    languages.put(3, "JavaScript");
+	    System.out.println("HashMap: " + languages);
+
+	    // replace mapping for key 2
+	    String value = languages.replace(2, "Java");
+
+	    System.out.println("Replaced Value: " + value);
+	    System.out.println("Updated HashMap: " + languages);
+	  }
+	}
+
+
+package javasample.collections.HashMap.Change_value;
+import java.util.HashMap;
+
+
+public class replaceAll_method {
+
+	    public static void main(String[] args) {
+	        // create an HashMap
+	        HashMap<Integer, String> languages = new HashMap<>();
+
+	        // add entries to the HashMap
+	        languages.put(1, "java");
+	        languages.put(2, "javascript");
+	        languages.put(3, "python");
+	        System.out.println("HashMap: " + languages);
+
+	        // Change all value to uppercase
+	        languages.replaceAll((key, value) -> value.toUpperCase());
+	        System.out.println("Updated HashMap: " + languages);
+	    }
+	}
+
+
+other methods
+package javasample.collections.HashMap.other_methods;
+import java.util.*;
+public class clear_method {
+	 public static void main(String[] args) {
+
+	        HashMap<String, Integer> numbers = new HashMap<>();
+	        numbers.put("One", 1);
+	        numbers.put("Two", 2);
+	        numbers.put("Three", 3);
+	        System.out.println("HashMap: " + numbers);
+
+	        // remove all mappings from HashMap
+	        numbers.clear();
+	        System.out.println("HashMap after clear(): " + numbers);
+	    }
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+
+public class clone_method {
+
+	    public static void main(String[] args){
+	    	//Example 1: Make a Copy of HashMap
+	        // create HashMap
+	        HashMap<String, Integer> languages = new HashMap<>();
+
+	        languages.put("Java", 14);
+	        languages.put("Python", 3);
+	        languages.put("JavaScript", 1);
+	        System.out.println("HashMap: " + languages);
+
+	        // create copy of languages
+	        HashMap<String, Integer> cloneLanguages = (HashMap<String, Integer>)languages.clone();
+	        System.out.println("Cloned HashMap: " + cloneLanguages);
+	        
+	        
+	        
+	        //Example 2: Print the Return Value of clone()
+	        // create a hashmap
+	        HashMap<String, Integer> primeNumbers = new HashMap<>();
+	        primeNumbers.put("Two", 2);
+	        primeNumbers.put("Three", 3);
+	        primeNumbers.put("Five", 5);
+	        System.out.println("Numbers: " + primeNumbers);
+
+	        // print the return value of clone()
+	        System.out.println("Return value of clone(): " + primeNumbers.clone());
+	    }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+
+public class compute_method {
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // recompute the value of Shoes with 10% discount
+	    int newPrice = prices.compute("Shoes", (key, value) -> value - value * 10/100);
+	    System.out.println("Discounted Price of Shoes: " + newPrice);
+
+	    // print updated HashMap
+	    System.out.println("Updated HashMap: " + prices);
+	  }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+
+public class computeIfAbsent_method {
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // compute the value of Shirt
+	    int shirtPrice = prices.computeIfAbsent("Shirt", key -> 280);
+	    System.out.println("Price of Shirt: " + shirtPrice);
+
+	    // print updated HashMap
+	    System.out.println("Updated HashMap: " + prices);
+	  }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+
+public class computeIfPresent_method {
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // recompute the value of Shoes with 10% VAT
+	    int shoesPrice = prices.computeIfPresent("Shoes", (key, value) -> value + value * 10/100);
+	    System.out.println("Price of Shoes after VAT: " + shoesPrice);
+
+	    // print updated HashMap
+	    System.out.println("Updated HashMap: " + prices);
+	  }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+
+public class computeIfPresent_method {
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    // recompute the value of Shoes with 10% VAT
+	    int shoesPrice = prices.computeIfPresent("Shoes", (key, value) -> value + value * 10/100);
+	    System.out.println("Price of Shoes after VAT: " + shoesPrice);
+
+	    // print updated HashMap
+	    System.out.println("Updated HashMap: " + prices);
+	  }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+public class containsKey_method {
+
+
+	  public static void main(String[] args){
+		//Example 1: Java HashMap containsKey()
+	    // create a HashMap
+	    HashMap<String, String> details = new HashMap<>();
+
+	    // add mappings to HashMap
+	    details.put("Name", "Programiz");
+	    details.put("Domain", "programiz.com");
+	    details.put("Location", "Nepal");
+	    System.out.println("Programiz Details: \n" + details);
+
+	    // check if key Domain is present
+	    if(details.containsKey("Domain")) {
+	      System.out.println("Domain name is present in the Hashmap.");
+	    }
+	    
+	    //Example 2: Add Entry to HashMap if Key is already not present
+	  
+	        // create a HashMap
+	        HashMap<String, String> countries = new HashMap<>();
+
+	        // add mappings to HashMap
+	        countries.put("USA", "Washington");
+	        countries.put("Australia", "Canberra");
+	        System.out.println("HashMap:\n" + countries);
+
+	        // check if key Spain is present
+	        if(!countries.containsKey("Spain")) {
+	          // add entry if key already not present
+	          countries.put("Spain", "Madrid");
+	        }
+
+	        System.out.println("Updated HashMap:\n" + countries);
+
+	  }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+public class containsValue_method {
+
+	  public static void main(String[] args){
+		//Example 1: Java HashMap containsValue()
+	    // create a HashMap
+	    HashMap<Integer, String> languages = new HashMap<>();
+
+	    // add mappings to HashMap
+	    languages.put(1, "Python");
+	    languages.put(2, "Java");
+	    languages.put(3, "JS");
+	    System.out.println("HashMap" + languages);
+
+	    // check if value Java is present
+	    if(languages.containsValue("Java")) {
+	      System.out.println("Java is present on the list.");
+	    }
+	    
+	    
+	    //Example 2: Add Entry to HashMap if Value is already not present
+	    // create a HashMap
+	    HashMap<String, String> countries = new HashMap<>();
+
+	    // add mappings to HashMap
+	    countries.put("Washington", "USA");
+	    countries.put("Canberra", "Australia");
+	    System.out.println("HashMap:\n" + countries);
+
+	    // check if the value Spain is present
+	    if(!countries.containsValue("Spain")) {
+	      // add entry if Value already not present
+	      countries.put("Madrid", "Spain");
+	    }
+
+	    System.out.println("Updated HashMap:\n" + countries);
+	  }
+	}
+
+
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+
+public class isEmpty_method {
+
+	    public static void main(String[] args) {
+	        // create an HashMap
+	        HashMap<String, Integer> languages = new HashMap<>();
+	        System.out.println("Newly Created HashMap: " + languages);
+
+	        // checks if the HashMap has any element
+	        boolean result = languages.isEmpty(); // true
+	        System.out.println("Is the HashMap empty? " + result);
+
+	        // insert some elements to the HashMap
+	        languages.put("Python", 1);
+	        languages.put("Java", 14);
+	        System.out.println("Updated HashMap: " + languages);
+
+	        // checks if the HashMap is empty
+	        result = languages.isEmpty();  // false
+	        System.out.println("Is the HashMap empty? " + result);
+	    }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+public class merge_method {
+
+	  public static void main(String[] args) {
+	    // create an HashMap
+	    HashMap<String, Integer> prices = new HashMap<>();
+
+	    // insert entries to the HashMap
+	    prices.put("Shoes", 200);
+	    prices.put("Bag", 300);
+	    prices.put("Pant", 150);
+	    System.out.println("HashMap: " + prices);
+
+	    int returnedValue = prices.merge("Shirt", 100, (oldValue, newValue) -> oldValue + newValue);
+	    System.out.println("Price of Shirt: " + returnedValue);
+
+	    // print updated HashMap
+	    System.out.println("Updated HashMap: " + prices);
+	  }
+	
+
+}
+package javasample.collections.HashMap.other_methods;
+import java.util.HashMap;
+
+public class size_method {
+
+	    public static void main(String[] args) {
+	        // create an HashMap
+	        HashMap<String, String> countries = new HashMap<>();
+
+	        // insert keys/values to the HashMap
+	        countries.put("USA", "Washington");
+	        countries.put("UK", "London");
+	        countries.put("Canada", "Ottawa");
+	        System.out.println("HashMap: " + countries);
+
+	        // get the number of keys/values from HashMap
+	        int size = countries.size();
+	        System.out.println("Size of HashMap: " + size);
+	    }
+	}
+
+package javasample.collections.HashMap.Remove_Elements;
+import java.util.HashMap;
+
+
+public class remove_method {
+
+	  public static void main(String[] args) {
+
+	    HashMap<Integer, String> languages = new HashMap<>();
+	    languages.put(1, "Java");
+	    languages.put(2, "Python");
+	    languages.put(3, "JavaScript");
+	    System.out.println("HashMap: " + languages);
+
+	    // remove element associated with key 2
+	    String value = languages.remove(2);
+	    System.out.println("Removed value: " + value);
+
+	    System.out.println("Updated HashMap: " + languages);
+	  }
+	
+
+}
+
+
+
+
+
+
